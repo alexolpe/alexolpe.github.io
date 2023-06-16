@@ -1,17 +1,127 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>AVI Video Example</title>
-  </head>
-  <body>
-    MP4
-    <video width="512" height="384" controls loop>
-      <source src="./resrgan/125.1_out.mp4" type="video/mp4" autoplay>
-      Your browser does not support the video tag.
-    </video>
-    <video width="512" height="384" controls loop>
-      <source src="./resrgan/125.1_out.mp4" type="video/mp4" autoplay>
-      Your browser does not support the video tag.
-    </video>
-  </body>
+<head>
+  <title>Responsive Video Grid</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .grid-item {
+      position: relative;
+      padding-bottom: 56.25%; /* Maintain aspect ratio of 16:9 */
+    }
+
+    .grid-item video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Video Grid</h1>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/2-video016_39x384x512(1).mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/4-video012_40x384x512(0).mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/125.217_out.mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/125.191_out.mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/3-video021_45x384x512(1).mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/2-video036_28x384x512(0).mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/125.180_out.mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/125.130_out.mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/125.31_out.mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/2-video036_28x384x512(0).mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/125.25_out.mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/1-video042_58x384x512(1).mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/125.16_out.mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/4-video019_47x384x512(1).mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <div class="grid-item">
+      <video autoplay loop>
+        <source src="./mp4/1-video016_39x384x512(1).mp4" type="video/mp4">
+        Your browser does not support the MP4 video format.
+      </video>
+    </div>
+    <!-- Repeat the above grid-item structure for the remaining cells -->
+    <!-- Add more div.grid-item elements for a total of 15 cells -->
+  </div>
+</body>
 </html>
+
 
