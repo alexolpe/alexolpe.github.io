@@ -1,127 +1,197 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Responsive Video Grid</title>
-  <style>
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 10px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative Videos</title>
 
-    .grid-item {
-      position: relative;
-      padding-bottom: 56.25%; /* Maintain aspect ratio of 16:9 */
-    }
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
-    .grid-item video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  </style>
+    <!-- Custom styles -->
+    <style>
+        /* Agrega aquí tus estilos personalizados si los necesitas */
+        .text-center {
+            text-align: center;
+        }
+
+        .video-cell {
+            position: relative;
+        }
+
+        .video-label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /*transform: translate(-50%, -50%);*/
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            display: none;
+        }
+
+        .video-cell:hover .video-label {
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Responsive Video Grid</h1>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Generation of Synthetic High-resolution Echocardiograms Using Video Diffusion Models</a>
+                <!-- Agrega aquí cualquier elemento de navegación adicional si lo necesitas -->
+            </div>
+        </nav>
+    </header>
 
-  <div class="grid-container">
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/2-video016_39x384x512(1).mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/4-video012_40x384x512(0).mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/125.217_out.mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/125.191_out.mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/3-video021_45x384x512(1).mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/2-video036_28x384x512(0).mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/125.180_out.mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/125.130_out.mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/125.31_out.mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/2-video036_28x384x512(0).mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/125.25_out.mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/1-video042_58x384x512(1).mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/125.16_out.mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/4-video019_47x384x512(1).mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <div class="grid-item">
-      <video controls loop>
-        <source src="./mp4/1-video016_39x384x512(1).mp4" type="video/mp4">
-        Your browser does not support the MP4 video format.
-      </video>
-    </div>
-    <!-- Repeat the above grid-item structure for the remaining cells -->
-    <!-- Add more div.grid-item elements for a total of 15 cells -->
-  </div>
+    <main>
+        <section class="py-5 text-center">
+            <div class="container">
+                <h1 class="display-4">Generation of Synthetic High-resolution Echocardiograms Using Video Diffusion Models</h1>
+                <p class="lead">The echocardiogram is a video sequence of a human patient’s heart captured using ultra-
+                    sound imaging. Echocardiograms can show the position and movement of the membranes,
+                    blood vessels, and cavities of human patients’ hearts. They enable the diagnosis of cardio-
+                    vascular diseases. Deep Learning has shown success in a variety of biomedical applications
+                    such as disease diagnosis, protein structure prediction, and image reconstruction from
+                    brain activity. Deep Learning methods are usually data-driven, meaning that they typically
+                    require big datasets for training. However, in the medical field, data points are scarce
+                    due to factors such as privacy and cost. This can make it difficult to train and evaluate
+                    Deep Learning-based medical analysis methods. The lack of data can be addressed using
+                    generative models, which are Deep Learning models that can produce new samples given
+                    a set of known samples. In this thesis, we investigate the generation of echocardiogram
+                    video sequences using diffusion models. Diffusion models are a type of popular generative
+                    model, which are recently used for video generation. Existing video diffusion models focus
+                    on generating natural images. In this thesis, We improve the video diffusion model for
+                    echocardiogram generation. Our approach uses a customized 3D self-attention mechanism,
+                    which enhances the video quality and reduces GPU memory consumption. Our approach
+                    also introduces an echocardiogram-specific super-resolution module, which enables the
+                    generation of high-resolution echocardiograms. The experimental results showed that our
+                    approach can generate higher quality videos compared to the original video diffusion
+                    models. Compared to existing generative methods for echocardiograms, our approach can
+                    generate video sequences with higher resolution, more details, and improved smoothness.
+
+                    The source code is available at: <a href="https://github.com/alexolpe/Generation-of-Synthetic-Echocardiograms-Using-Video-Diffusion-Models">https://github.com/alexolpe/Generation-of-Synthetic-Echocardiograms-Using-Video-Diffusion-Models</a>
+                
+                </p>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/2-video016_39x384x512(1).mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Real</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/4-video012_40x384x512(0).mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Real</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/125.217_out.mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Synthetic</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/125.191_out.mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Synthetic</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/3-video021_45x384x512(1).mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Real</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/2-video036_28x384x512(0).mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Real</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/125.180_out.mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Synthetic</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/125.130_out.mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Synthetic</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/125.31_out.mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Synthetic</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/2-video036_28x384x512(0).mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Real</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/125.25_out.mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Synthetic</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/1-video042_58x384x512(1).mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Real</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/125.16_out.mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Synthetic</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/4-video019_47x384x512(1).mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Real</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/1-video016_39x384x512(1).mp4" width="100%" height="auto" loop autoplay muted playsinline></video>
+                            <div class="video-label">Real</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light py-3">
+        <div class="container text-center">
+            <p>&copy; 2023 Generation of Synthetic High-resolution Echocardiograms Using Video Diffusion Models. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
-
-
