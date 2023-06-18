@@ -12,6 +12,28 @@
     <!-- Custom styles -->
     <style>
         /* Agrega aquí tus estilos personalizados si los necesitas */
+        .text-center {
+            text-align: center;
+        }
+
+        .video-cell {
+            position: relative;
+        }
+
+        .video-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            display: none;
+        }
+
+        .video-cell:hover .video-label {
+            display: block;
+        }
     </style>
 </head>
 
@@ -26,12 +48,30 @@
     </header>
 
     <main>
-        <section class="py-5">
+        <section class="py-5 text-center">
             <div class="container">
                 <h1 class="display-4">Generative Videos Paper</h1>
                 <p class="lead">Aquí puedes agregar una breve introducción al paper.</p>
 
-                <!-- Agrega el contenido principal de tu página, como gráficos, tablas, resultados, etc. -->
+                <div class="row">
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="./mp4/2-video016_39x384x512(1).mp4" width="100%" height="auto" loop autoplay></video>
+                            <div class="video-label">Texto 1</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="video-cell">
+                            <video src="video2.mp4" width="100%" height="auto" loop autoplay></video>
+                            <div class="video-label">Texto 2</div>
+                        </div>
+                    </div>
+                    <!-- Agrega aquí más columnas con videos -->
+                </div>
+
+                <div class="row">
+                    <!-- Agrega aquí más filas con videos -->
+                </div>
             </div>
         </section>
     </main>
