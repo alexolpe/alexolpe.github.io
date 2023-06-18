@@ -22,8 +22,10 @@
 
         .video-label {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             transform: translate(-50%, -50%);
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
@@ -41,7 +43,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">Generative Videos</a>
+                <a class="navbar-brand" href="#">Generation of Synthetic High-resolution Echocardiograms Using Video Diffusion Models</a>
                 <!-- Agrega aquí cualquier elemento de navegación adicional si lo necesitas -->
             </div>
         </nav>
@@ -50,8 +52,28 @@
     <main>
         <section class="py-5 text-center">
             <div class="container">
-                <h1 class="display-4">Generative Videos Paper</h1>
-                <p class="lead">Aquí puedes agregar una breve introducción al paper.</p>
+                <h1 class="display-4">Generation of Synthetic High-resolution Echocardiograms Using Video Diffusion Models</h1>
+                <p class="lead">The echocardiogram is a video sequence of a human patient’s heart captured using ultra-
+                    sound imaging. Echocardiograms can show the position and movement of the membranes,
+                    blood vessels, and cavities of human patients’ hearts. They enable the diagnosis of cardio-
+                    vascular diseases. Deep learning has shown success in a variety of biomedical applications
+                    such as disease diagnosis, protein structure prediction, and image reconstruction from
+                    brain activity. Deep learning methods are usually data-driven, meaning that they typically
+                    require big datasets for training. However, in the medical field, data points are scarce
+                    due to factors such as privacy and cost. This can make it difficult to train and evaluate
+                    deep learning-based medical analysis methods. The lack of data can be addressed using
+                    generative models, which are deep learning models that can produce new samples given
+                    a set of known samples. In this thesis, we investigate the generation of echocardiogram
+                    video sequences using diffusion models. Diffusion models are a type of popular generative
+                    model, which are recently used for video generation. Existing video diffusion models focus
+                    on generating natural images. In this thesis, We improve the video diffusion model for
+                    echocardiogram generation. Our approach uses a customized 3D self-attention mechanism,
+                    which enhances the video quality and reduces GPU memory consumption. Our approach
+                    also introduces an echocardiogram-specific super-resolution module, which enables the
+                    generation of high-resolution echocardiograms. The experimental results showed that our
+                    approach can generate higher quality videos compared to the original video diffusion
+                    models. Compared to existing generative methods for echocardiograms, our approach can
+                    generate video sequences with higher resolution, more details, and improved smoothness.</p>
 
                 <div class="row">
                     <div class="col">
@@ -78,7 +100,7 @@
 
     <footer class="bg-dark text-light py-3">
         <div class="container text-center">
-            <p>&copy; 2023 Generative Videos. Todos los derechos reservados.</p>
+            <p>&copy; 2023 Generation of Synthetic High-resolution Echocardiograms Using Video Diffusion Models. All rights reserved.</p>
         </div>
     </footer>
 
